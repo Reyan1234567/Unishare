@@ -1,4 +1,4 @@
-Personal-Expense-Tracker
+Expense-Tracker
 
         Abdulhafiz Jemal....................UGR/2366/15
         Eyosyas Solomon.....................UGR/9247/15
