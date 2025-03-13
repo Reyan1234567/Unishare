@@ -1,5 +1,3 @@
-Here is a more presentable version of your README content:
-
 # UniShare
 ## University Resource Exchange
 
