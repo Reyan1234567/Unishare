@@ -1,4 +1,15 @@
-Expense-Tracker
+#UniShare
+University Resource Exchange
+#Overview
+A mobile app where university students can share, borrow, or exchange academic resources like books, notes, lab equipment, and study materials.
+#Features
+Authentication & Authorization
+User registration and login (JWT-based authentication)
+Role-based access (Student, Admin)
+CRUD Operations (Business Features)
+Resource Listing: Students can add resources they want to share or exchange.
+Resource Browsing: Users can view available resources with filters (category, availability, etc.).
+Manage Listings: Users can update or delete their listed resources.
 
         Abdulhafiz Jemal....................UGR/2366/15
         Eyosyas Solomon.....................UGR/9247/15
