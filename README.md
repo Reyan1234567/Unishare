@@ -19,5 +19,3 @@ A mobile app where university students can share, borrow, or exchange academic r
 - Feben Getachew - UGR/4295/15
 - Merertu Philipose - UGR/4906/15
 - Reyan Berhanu - UGR/1650/15
-
-You can update your README.md file with this content. If you need help with updating the file, let me know!
