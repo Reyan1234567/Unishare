@@ -7,11 +7,15 @@ const newRefreshSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now,  
-    expires: '3d',      
-  }
+    default: Date.now,
+  },
 });
 
-const RefreshToken = mongoose.model('refreshToken', newRefreshSchema);
+newRefreshSchema.index(
+  { createdAt: 1 },
+  { expireAfterSeconds: 3 * 24 * 60 * 60 }
+);
+
+const RefreshToken = mongoose.model("refreshToken", newRefreshSchema);
 
 export default RefreshToken;

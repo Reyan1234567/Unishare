@@ -10,6 +10,8 @@ config()
 
 const accessToken_Secret = process.env.ACCESSTOKEN;
 const refreshToken_Secret = process.env.REFRESHTOKEN;
+
+//Sign-up
 router.post("/signup", async (req, res) => {
   const { body } = req;
   if (!body.username || !body.email || !body.password) {
@@ -41,6 +43,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+//Sign-in 
 router.post("/signin", async (req, res) => {
   const { body } = req;
   if (!body.username || !body.password) {
@@ -65,6 +68,7 @@ router.post("/signin", async (req, res) => {
       refreshToken_Secret,
       { expiresIn: "3d" }
     );
+    req.user=userExist
     res.status().send({ accessToken: accessToken, refreshToken: refreshToken });
   } catch (error) {
     console.log(error);
@@ -72,6 +76,7 @@ router.post("/signin", async (req, res) => {
   }
 });
 
+//RefreshToken 
 router.post("/refresh", (req, res) => {
   const { body } = req;
   const refresh = body.refreshToken;
@@ -97,5 +102,18 @@ router.post("/refresh", (req, res) => {
     res.send(error.message);
   }
 });
-
+//check if field is empty
+router.get("/fieldCheck",(req,res)=>{
+  const {user}=req
+  try {
+      if(!user.enrolledCourses){
+        return res.status(200).send(false)
+      }
+      else{
+        return res.status(200).send(true)
+      }
+  } catch (error) {
+      
+  }
+})
 export default router;
