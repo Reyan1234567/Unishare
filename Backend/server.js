@@ -4,7 +4,8 @@ import connect from "./config/db.js"
 import routes from "./routes/route.js"
 const app=express()
 
-
+app.use(express.json())
+app.use(cors())
 app.use(routes)
 config()
 
